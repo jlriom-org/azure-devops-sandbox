@@ -20,8 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.x
-    - name: default dir
+    - name: set default dir
       run: cd ./src
+    - name: echo default dir
+      run: ls
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
